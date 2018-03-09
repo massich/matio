@@ -1,0 +1,37 @@
+shallow_clone: true
+
+platform:
+  # - x86
+  - x64
+
+configuration:
+  - Debug
+  # - Release
+
+image:
+  - Visual Studio 2015
+  # - Visual Studio 2017
+
+
+skip_commits:
+# Add [av skip] to commit messages
+  message: /\[av skip\]/
+
+# # To allow remote connection to appveyor
+# init:
+#   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+
+install:
+
+before_build:
+
+build:
+  project: $(APPVEYOR_BUILD_FOLDER)\visual_studio\matio.sln
+
+# test_script:
+#   - cmd: ctest -v .
+
+deploy: off
+
+# on_finish:
+#   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
