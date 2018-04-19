@@ -1,13 +1,13 @@
 clone_depth: 5
 
 platform:
-  - Win32
+  # - Win32
   - x64
 
 environment:
   matrix:
   - configuration: Release
-  - DefaultPlatformToolset: v100
+  # - DefaultPlatformToolset: v100
 
 # To allow remote connection to appveyor
 init:
