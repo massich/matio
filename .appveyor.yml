@@ -26,8 +26,9 @@ before_build:
         $env:PCRE_PLATFORM="x64"
         $env:VCVARS_PLATFORM="amd64"
         $env:HDF5_DIR="C:\projects\HDF5-1.8.13-win64"
-        Start-FileDownload 'https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8/hdf5-1.8.13/bin/windows/hdf5-1.8.13-win64-VS2010-shared.zip'
-        7z x -y hdf5-1.8.13-win64-VS2010-shared.zip
+        Start-FileDownload 'https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8/hdf5-1.8.13/bin/windows/hdf5-1.8.13-win64-VS2010-static.zip'
+        
+        7z x -y hdf5-1.8.13-win64-VS2010-static.zip
         7z x -oC:\projects\HDF5-1.8.13-win64 -y hdf5-1.8.13\HDF5-1.8.13-win64.exe
       }
 - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" %VCVARS_PLATFORM%
