@@ -235,7 +235,7 @@
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>libhdf5.lib;libhdf5_cpp.lib;libhdf5_f90cstub.lib;libhdf5_fortran.lib;libhdf5_hl.lib;libhdf5_hl_cpp.lib;libhdf5_hl_f90cstub.lib;libhdf5_hl_fortran.lib;libhdf5_tools.lib;libszip.lib;libzlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;libhdf5.lib;libhdf5_cpp.lib;libhdf5_f90cstub.lib;libhdf5_fortran.lib;libhdf5_hl.lib;libhdf5_hl_cpp.lib;libhdf5_hl_f90cstub.lib;libhdf5_hl_fortran.lib;libhdf5_tools.lib;libszip.lib;libzlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
