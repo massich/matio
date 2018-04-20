@@ -95,7 +95,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Lib|Win32'" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Lib|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Lib|x64'">
+    <IncludePath>$(HDF5_DIR)/include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(HDF5_DIR)/lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>

@@ -108,6 +108,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Lib|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>$(HDF5_DIR)/lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -234,6 +235,7 @@
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalDependencies>libhdf5.lib;libhdf5_cpp.lib;libhdf5_f90cstub.lib;libhdf5_fortran.lib;libhdf5_hl.lib;libhdf5_hl_cpp.lib;libhdf5_hl_f90cstub.lib;libhdf5_hl_fortran.lib;libhdf5_tools.lib;libszip.lib;libzlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
